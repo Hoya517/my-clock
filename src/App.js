@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import MyClock from './MyClock';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <MyClock text="시계1번" color="RED" location="파리"/>
+        <MyClock text="시계2번" color="TOMATO"/>
+        <MyClock text="시계3번" color="BLUE"/>
+        <MyClock text="시계4번" color="GREEN"/>
+      </div>
+    )
+  }
 }
+
 
 export default App;
